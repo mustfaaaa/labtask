@@ -44,3 +44,41 @@
             <li>❌ <strong>Firewall/NAT Issues:</strong> Direct connections may be blocked.</li>
         </ul>
     </div>
+ <h1>Java Peer-to-Peer Encrypted Communication (PeerA → PeerB)</h1>
+    <h2>Overview</h2>
+ <p>This Java program demonstrates encrypted message transfer between two programs on the same PC using AES encryption and socket programming.</p>
+
+   <h2>Peer A (Sender)</h2>
+   <ul>
+        <li>Takes a message input from the user</li>
+        <li>Encrypts the message using AES (128-bit key)</li>
+        <li>Sends the encrypted message to Peer B at <code>127.0.0.1:5000</code></li>
+    </ul>
+ <h2>Peer B (Receiver)</h2>
+    
+   <ul>
+        <li>Listens for incoming connections on port <code>5000</code></li>
+        <li>Receives the encrypted message</li>
+        <li>Decrypts it using the same AES key</li>
+        <li>Displays the original (decrypted) message on the console</li>
+        
+   </ul>
+
+ <h2>Technology Used</h2>
+    <ul>
+        <li><strong>Java Sockets</strong> for network communication</li>
+        <li><strong>Java Cryptography Extension (JCE)</strong> for AES encryption/decryption</li>
+    </ul>
+
+   <h2>Pros</h2>
+    <ul>
+        <li>Secure communication using symmetric encryption</li>
+        <li>Simple peer-to-peer setup on a local machine</li>
+        <li>No external libraries required</li>
+ </ul>
+    <h2>Cons</h2>
+    <ul>
+        <li>Hardcoded key (not secure in production)</li>
+        <li>No support for multiple simultaneous messages</li>
+        <li>Limited to local communication (localhost only)</li>
+    </ul>
