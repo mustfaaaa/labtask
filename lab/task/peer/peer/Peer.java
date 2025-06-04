@@ -1,4 +1,4 @@
-package peer;
+package lab.task.peer.peer;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
